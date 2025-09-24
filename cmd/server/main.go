@@ -18,7 +18,6 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "Привет! Сервер работает на порту 8080")
 	})
-	routes.RouteTask()
 	http.HandleFunc("/task", handler.PostTaskHandler)
 	http.HandleFunc("/status/{task_id}", handler.GetResultHandler)
 	http.HandleFunc("/result/{task_id}", handler.GetResultHandler)
