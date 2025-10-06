@@ -5,5 +5,5 @@ import (
 )
 
 func RouteTask() {
-	http.HandleFunc("/task", handler.PostTaskHandler)
+	http.HandleFunc("/task", handlers.PostTaskHandler)
 }
